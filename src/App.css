@@ -1,0 +1,165 @@
+.border {
+  border-width: 1px;
+  border-color: black;
+  margin-left: 1px;
+}
+html {
+  overflow-x: hidden;
+}
+.border:nth-child(n + 1) {
+  margin-left: -1px;
+
+  margin-top: -1px;
+}
+
+/* ------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------ */
+/* NAV ANIMATIONS */
+.nav {
+  z-index: 10000;
+  position: fixed;
+  top: 63px;
+  left: 0;
+  transform: translateX(-150%);
+  transition: all 0.5s;
+  list-style-type: none;
+  background-color: white;
+  height: 100%;
+  cursor: pointer;
+}
+.menuitems {
+  width: 200px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.menuitems:hover {
+  width: 200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+.menu:hover .nav {
+  transform: translateX(0);
+}
+.menu:hover .nav .menuitems {
+  animation-duration: 0.5s;
+  animation-name: fadeIn;
+  animation-fill-mode: both;
+}
+.menu:hover .nav .menuitems:first-child {
+  animation-delay: 0.25s;
+}
+.menu:hover .nav .menuitems:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.menu:hover .nav .menuitems:nth-child(3) {
+  animation-delay: 0.75s;
+}
+.menu:hover .nav .menuitems:last-child {
+  animation-delay: 1s;
+}
+.nav2,
+.nav3 {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  white-space: nowrap;
+  left: 100%;
+  background-color: white;
+  width: 0;
+  transition: width 0.5s;
+  color: black;
+  overflow: hidden;
+  cursor: pointer;
+}
+.nav .menuitem1:hover .nav2,
+.nav .menuitem2:hover .nav3 {
+  width: 100%;
+  overflow-wrap: normal;
+}
+.nav2 .menuitemssub1:hover,
+.nav3 .menuitemssub2:hover {
+  background-color: black;
+  color: white;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.menu {
+  cursor: pointer;
+}
+
+.menuitems,
+.menuitemssub1,
+.menuitemssub2 {
+  height: 64px;
+}
+.glassesItem {
+  border-left: 1px solid black;
+  margin-left: 1px;
+}
+
+/* ------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------ */
+/* FILTER BUTTON STYLES */
+.buttonBorder,
+.buttonBorder:hover {
+  border: 1px solid black;
+  color: black;
+  box-shadow: none !important;
+  background: white !important;
+  text-transform: uppercase;
+}
+.buttonNone,
+.buttonNone:hover {
+  border: none;
+  color: rgba(128, 128, 128, 0.8);
+  box-shadow: none !important;
+  background: white !important;
+  text-transform: uppercase;
+}
+
+.buttonBorderContainer:last-child {
+  border-right: none;
+}
+.buttonBorderContainer:first-child {
+  border-left: none;
+}
+.buttonBorderContainer {
+  cursor: pointer;
+}
+
+/* ------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------ */
+/* CUSTOM FONTS */
+.fontCustom {
+  font-family: 'caslongraduploaded_file';
+}
+.fontCustom2 {
+  font-family: 'tiempostext';
+}
+
+@font-face {
+  font-family: 'caslongraduploaded_file';
+  src: url('./fonts/caslongrad-webfont.woff2') format('woff2'),
+    url('./fonts/caslongrad-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'tiempostext';
+  src: url('./fonts/test-tiempos-text-regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}

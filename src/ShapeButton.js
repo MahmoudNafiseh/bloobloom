@@ -30,6 +30,7 @@ const ShapeButton = React.memo(({ name, setName }) => {
       className="border buttonBorderContainer"
       h={'64px'}
       mb={'1px'}
+      w={'25vw'}
       maxW={'25%'}
     >
       <Button

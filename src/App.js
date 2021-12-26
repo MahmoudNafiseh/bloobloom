@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { ChakraProvider, theme, useDisclosure } from '@chakra-ui/react';
+import { ChakraProvider, theme, useDisclosure, Box } from '@chakra-ui/react';
 import { useInfiniteQuery } from 'react-query';
 import './App.css';
 import Header from './Header';
@@ -150,39 +150,41 @@ function App() {
       {/*  */}
       {/*  */}
       {/* Renders the filters buttons, and checks passes if user clicks on Colour/Shape */}
-      <Filters
-        isOpen={isOpen}
-        setOpen={setOpen}
-        open={open}
-        onToggle={onToggle}
-      />
-      {/*  */}
-      {/*  */}
-      {/* Renders the filters menu, and checks if the menu is currently opened or not to collapse */}
-      <FiltersCollapsed
-        open={open}
-        isOpen={isOpen}
-        square={square}
-        setSquare={setSquare}
-        rectangle={rectangle}
-        setRectangle={setRectangle}
-        round={round}
-        setRound={setRound}
-        cateye={cateye}
-        setCateye={setCateye}
-        black={black}
-        setBlack={setBlack}
-        tortoise={tortoise}
-        setTortoise={setTortoise}
-        coloured={coloured}
-        setColoured={setColoured}
-        crystal={crystal}
-        setCrystal={setCrystal}
-        dark={dark}
-        setDark={setDark}
-        bright={bright}
-        setBright={setBright}
-      />
+      <Box>
+        <Filters
+          isOpen={isOpen}
+          setOpen={setOpen}
+          open={open}
+          onToggle={onToggle}
+        />
+        {/*  */}
+        {/*  */}
+        {/* Renders the filters menu, and checks if the menu is currently opened or not to collapse */}
+        <FiltersCollapsed
+          open={open}
+          isOpen={isOpen}
+          square={square}
+          setSquare={setSquare}
+          rectangle={rectangle}
+          setRectangle={setRectangle}
+          round={round}
+          setRound={setRound}
+          cateye={cateye}
+          setCateye={setCateye}
+          black={black}
+          setBlack={setBlack}
+          tortoise={tortoise}
+          setTortoise={setTortoise}
+          coloured={coloured}
+          setColoured={setColoured}
+          crystal={crystal}
+          setCrystal={setCrystal}
+          dark={dark}
+          setDark={setDark}
+          bright={bright}
+          setBright={setBright}
+        />
+      </Box>
       {/*  */}
       {/*  */}
       {/* Renders the glasses menu depending on the filter */}

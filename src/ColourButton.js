@@ -31,6 +31,7 @@ function ColourButton({ name, setName }) {
       className="border buttonBorderContainer"
       h={'64px'}
       mb={'1px'}
+      w={'16.66667vw'}
       maxW={'16.66667%'}
     >
       <Button

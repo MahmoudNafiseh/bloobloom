@@ -32,10 +32,10 @@ const FiltersCollapsed = ({
 }) => {
   return (
     <Box w={'100%'} flexDir={'row'}>
-      <Collapse in={open} animateOpacity>
+      <Collapse style={{ width: '100%' }} in={open} animateOpacity>
         <Flex
           h={'64px'}
-          w={'full'}
+          w={'100%'}
           justifyContent={'center'}
           alignItems={'center'}
           ml={0}
@@ -48,10 +48,10 @@ const FiltersCollapsed = ({
           <ShapeButton name={cateye} setName={setCateye} />
         </Flex>
       </Collapse>
-      <Collapse in={isOpen} animateOpacity>
+      <Collapse style={{ width: '100%' }} in={isOpen} animateOpacity>
         <Flex
           h={'64px'}
-          w={'100%'}
+          minW={'100%'}
           justifyContent={'center'}
           alignItems={'center'}
           borderWidth={1}
